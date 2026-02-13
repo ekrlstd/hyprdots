@@ -1,0 +1,51 @@
+font = Noto Sans Medium
+
+# Window appearance
+width = 600
+height = 350
+border-width = 2
+border-color = #2d3145
+background-color = #0C060D
+outline-width = 0
+corner-radius = 12
+
+# Input field
+prompt-text = " > "
+prompt-padding = 5
+prompt-color = #89ddff
+prompt-background = #00000000
+prompt-background-padding = 0
+prompt-background-corner-radius = 0
+
+# Text styling
+font-size = 10
+text-color = #c8d3f5
+default-result-color = #c8d3f5
+placeholder-color = #6272a4
+
+# Selection styling
+selection-color = #c8d3f5
+selection-background = #1a1a2e
+selection-background-padding = 5
+selection-background-corner-radius = 2
+selection-match-color = #89ddff
+selection-background-padding = 5
+
+# Results area
+result-spacing = 9
+num-results = 10
+padding-top = 10
+padding-bottom = 10
+padding-left = 10
+padding-right = 10
+
+# Matching
+fuzzy-match = true
+drun-launch = true
+
+# Positioning
+anchor = center
+margin-top = 0
+margin-bottom = 0
+margin-left = 0
+margin-right = 0

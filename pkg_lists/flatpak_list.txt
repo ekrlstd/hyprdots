@@ -1,0 +1,14 @@
+com.usebottles.bottles.Locale
+org.freedesktop.Platform.Compat.i386
+org.freedesktop.Platform.GL.default
+org.freedesktop.Platform.GL.default
+org.freedesktop.Platform.GL.default
+org.freedesktop.Platform.GL.default
+org.freedesktop.Platform.GL32.default
+org.freedesktop.Platform.GL32.default
+org.freedesktop.Platform.codecs-extra
+org.freedesktop.Platform.codecs_extra.i386
+org.freedesktop.Platform.openh264
+org.gnome.Platform
+org.gnome.Platform.Locale
+org.vinegarhq.Sober

@@ -1,0 +1,15 @@
+# Cache and logs
+**/cache/
+**/.cache/
+*.log
+
+# Large media
+*.mp4
+*.mkv
+*.iso
+*.img
+
+# Temporary files
+*.tmp
+*.swp
+*~

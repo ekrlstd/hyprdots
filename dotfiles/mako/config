@@ -1,0 +1,23 @@
+# ~/.config/mako/config
+font=Noto Sans Medium 10
+width=300
+padding=12
+margin=10
+border-size=2
+border-radius=12
+background-color=#0C060D
+text-color=#c8d3f5
+border-color=#2A2C32
+default-timeout=5000
+# Enable actions (click support)
+on-notify=exec dunstctl history-pop
+
+[urgency=high]
+border-color=#ff6b9d
+background-color=#1a1a2e
+text-color=#ff8fb4
+
+[urgency=low]
+border-color=#2d3145
+background-color=#15111a
+text-color=#a3b9d9
