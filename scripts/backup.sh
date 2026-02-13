@@ -37,7 +37,7 @@ git push -u origin main
 cd "$REPO_DIR2" || exit
 
 # 2. Copy the latest configs into the repo folder
-cp -r ~/.config/nvim .
+cp -r ~/.config/nvim/* .
 
 # 4. Git Push
 git add .
