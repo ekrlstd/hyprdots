@@ -19,7 +19,8 @@ cp -r ~/.config/waybar ./dotfiles/
 cp -r ~/.config/alacritty ./dotfiles/
 cp -r ~/.config/tofi ./dotfiles/
 cp -r ~/.config/mako ./dotfiles/
-cp -r ~/.local/bin/*.sh ./scripts/
+# cp -r ~/.local/bin/*.sh ./scripts/
+cp ~/.local/bin/myscripts/* ./scripts/
 
 # 3. Update Package Lists
 pacman -Qqen >./pkg_lists/pacman_list.txt

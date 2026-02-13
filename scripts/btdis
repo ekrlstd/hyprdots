@@ -1,0 +1,16 @@
+#!/bin/bash
+
+coproc bt { bluetoothctl; }
+
+# Send commands in order
+echo -e 'disconnect 88:C9:E8:7E:72:3B\nexit' >&"${bt[1]}"
+
+# Close write end (so bluetoothctl knows no more input is coming)
+exec {fd}>&"${bt[1]}"
+exec {fd}>&-
+
+# Read output
+cat <&"${bt[0]}"
+
+# Wait for coproc to exit
+wait $bt_PID

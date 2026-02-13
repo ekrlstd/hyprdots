@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Output file
+output_file="summary.md"
+
+# Clear the output file if it exists
+>"$output_file"
+
+# Add directory structure using tree command
+echo "# Directory Structure" >>"$output_file"
+echo "" >>"$output_file"
+echo '```' >>"$output_file"
+tree >>"$output_file"
+echo '```' >>"$output_file"
+echo "" >>"$output_file"
+
+# Find all files (excluding the summary.md itself and directories)
+find . -type f ! -name "summary.md" | sort | while IFS= read -r file; do
+  # Remove leading './' from the filename for cleaner display
+  clean_name="${file#./}"
+
+  # Add the header with filename
+  echo "# $clean_name" >>"$output_file"
+  echo "" >>"$output_file"
+
+  # Add code block with file contents
+  echo '```' >>"$output_file"
+  cat "$file" >>"$output_file"
+  echo '```' >>"$output_file"
+  echo "" >>"$output_file"
+done
+
+echo "Summary created in $output_file"

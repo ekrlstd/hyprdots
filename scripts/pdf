@@ -1,0 +1,9 @@
+#!/bin/bash
+# Simple PDF opener using Zathura detached from terminal
+
+if [ -z "$1" ]; then
+    echo "Usage: pdf <file.pdf>"
+    exit 1
+fi
+
+zathura "$1" & disown
