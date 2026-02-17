@@ -17,6 +17,7 @@ bun
 capitaine-cursors
 cava
 celluloid
+chafa
 chromium
 clang
 cliphist
