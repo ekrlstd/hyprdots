@@ -1,22 +1,17 @@
 #!/bin/bash
-
 CONFIG_FILE="$HOME/.config/hypr/hyprland.conf"
 
-# Check if the config file exists
 if [ ! -f "$CONFIG_FILE" ]; then
-    echo "Error: Hyprland config file not found at $CONFIG_FILE"
-    exit 1
+  echo "Error: Hyprland config file not found at $CONFIG_FILE"
+  exit 1
 fi
 
-# Toggle the opacity lines
-if grep -q "active_opacity = 1" "$CONFIG_FILE" && grep -q "inactive_opacity = 1" "$CONFIG_FILE"; then
-    # Enable transparency
-    sed -i 's/active_opacity = 1/active_opacity = 0.90/' "$CONFIG_FILE"
-    sed -i 's/inactive_opacity = 1/inactive_opacity = 0.85/' "$CONFIG_FILE"
-    echo "Transparency enabled."
+if grep -q "^\s*active_opacity = 1$" "$CONFIG_FILE"; then
+  sed -i 's/^\(\s*\)active_opacity = 1$/\1active_opacity = 0.9/' "$CONFIG_FILE"
+  sed -i 's/^\(\s*\)inactive_opacity = 1$/\1inactive_opacity = 0.85/' "$CONFIG_FILE"
+  hyprctl reload
 else
-    # Disable transparency
-    sed -i 's/active_opacity = 0.90/active_opacity = 1/' "$CONFIG_FILE"
-    sed -i 's/inactive_opacity = 0.85/inactive_opacity = 1/' "$CONFIG_FILE"
-    echo "Transparency disabled."
+  sed -i 's/^\(\s*\)active_opacity = [0-9.]*$/\1active_opacity = 1/' "$CONFIG_FILE"
+  sed -i 's/^\(\s*\)inactive_opacity = [0-9.]*$/\1inactive_opacity = 1/' "$CONFIG_FILE"
+  hyprctl reload
 fi
