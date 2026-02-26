@@ -7,7 +7,6 @@ bibata-cursor-theme-bin
 cheese
 dms-shell-bin-debug
 figma-linux
-flutter
 google-breakpad
 gtk-engine-murrine
 hyprfindr
