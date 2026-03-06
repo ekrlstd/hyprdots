@@ -8,6 +8,7 @@ aws-cli
 base
 base-devel
 bat
+bind
 blueman
 bluez
 bluez-utils

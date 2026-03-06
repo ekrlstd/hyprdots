@@ -19,6 +19,7 @@ papirus-folders
 paru
 postman-bin
 python-ascii_magic
+python-eduvpn-client
 python-eyed3
 python-pywal16
 python-pywalfox
